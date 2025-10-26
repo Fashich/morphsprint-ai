@@ -32,11 +32,9 @@ export default function Login() {
         <div className="max-w-md w-full">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-12 justify-center">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">◆</span>
-            </div>
+            <img src={LOGO_URL} alt="MorphSprint AI" className="h-12 w-12 rounded-lg" />
             <span className="text-2xl font-bold text-white font-display">
-              SprintWise AI
+              MorphSprint AI
             </span>
           </div>
 
