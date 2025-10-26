@@ -138,7 +138,9 @@ function getRealtimeData(): RealtimeDataResponse {
   // Calculate stats
   const historicalVelocity = sprints.map((s) => s.velocity || s.completed);
   const avgVelocity = parseFloat(
-    (historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length).toFixed(1),
+    (
+      historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length
+    ).toFixed(1),
   );
   const completedPoints = userStories
     .filter((s) => s.status === "completed")
