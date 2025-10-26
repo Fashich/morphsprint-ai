@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Zap, Shield, Brain } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const LOGO_URL =
   "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
@@ -57,7 +58,7 @@ export default function Index() {
               MorphSprint AI
             </span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <a
               href="#features"
               className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
@@ -70,6 +71,7 @@ export default function Index() {
             >
               How It Works
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
@@ -121,7 +123,7 @@ export default function Index() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20">
+          <div className="stats-grid">
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 font-display">
                 98%

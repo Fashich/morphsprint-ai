@@ -146,6 +146,12 @@
     @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
     @apply bg-secondary text-secondary-foreground hover:shadow-lg;
   }
+
+  .stats-grid {
+    @apply grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20;
+    padding-top: 150px;
+    margin: 9px 0 -150px;
+  }
 }
 
 @keyframes fadeIn {
