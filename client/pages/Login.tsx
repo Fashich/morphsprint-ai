@@ -192,7 +192,9 @@ export default function Login() {
             {/* Divider */}
             <div className="flex items-center gap-3 my-6">
               <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
-              <span className="text-slate-600 dark:text-slate-400 text-sm">or</span>
+              <span className="text-slate-600 dark:text-slate-400 text-sm">
+                or
+              </span>
               <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
             </div>
 
@@ -211,7 +213,9 @@ export default function Login() {
           {/* Info Box */}
           <div className="mt-12 p-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/50 backdrop-blur">
             <p className="text-sm text-slate-700 dark:text-slate-300">
-              <span className="font-semibold text-slate-800 dark:text-slate-200">Demo Mode:</span>{" "}
+              <span className="font-semibold text-slate-800 dark:text-slate-200">
+                Demo Mode:
+              </span>{" "}
               Experience all features without connecting a wallet. Demo data is
               pre-loaded for easy exploration.
             </p>
