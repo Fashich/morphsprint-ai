@@ -44,14 +44,12 @@ export default function Index() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-20 border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30">
+      <nav className="sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">◆</span>
-            </div>
+            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
-              SprintWise AI
+              MorphSprint AI
             </span>
           </div>
           <div className="flex items-center gap-4">
