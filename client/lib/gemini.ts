@@ -42,17 +42,17 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
       body: JSON.stringify(request),
     });
 
+    const data = await response.json();
+
     if (!response.ok) {
-      const errorText = await response.text();
       console.error("Gemini API error response:", {
         status: response.status,
         statusText: response.statusText,
-        body: errorText,
+        body: data,
       });
-      throw new Error(`API error: ${response.status} ${response.statusText} - ${errorText}`);
+      throw new Error(`API error: ${response.status} ${response.statusText} - ${JSON.stringify(data)}`);
     }
 
-    const data: GeminiResponse = await response.json();
     return (
       data.candidates[0]?.content.parts[0]?.text || "No response generated"
     );
