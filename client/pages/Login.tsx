@@ -66,18 +66,28 @@ export default function Login() {
     setError(null);
 
     try {
-      // Initialize Google OAuth
-      const response = await fetch(
-        `https://accounts.google.com/o/oauth2/v2/auth?` +
-          `client_id=${import.meta.env.VITE_GOOGLE_CLIENT_ID}` +
-          `&redirect_uri=${encodeURIComponent(window.location.origin + "/auth/google/callback")}` +
-          `&response_type=code` +
-          `&scope=openid%20profile%20email`,
-      );
+      const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
-      if (!response.ok) {
-        throw new Error("Failed to initiate Google login");
+      if (!clientId) {
+        setError("Google OAuth is not configured. Please add VITE_GOOGLE_CLIENT_ID environment variable.");
+        setIsLoading(false);
+        return;
       }
+
+      // Redirect to Google OAuth consent screen
+      const redirectUri = encodeURIComponent(
+        window.location.origin + "/auth/google/callback",
+      );
+      const scope = encodeURIComponent("openid profile email");
+
+      const googleAuthUrl =
+        `https://accounts.google.com/o/oauth2/v2/auth?` +
+        `client_id=${clientId}` +
+        `&redirect_uri=${redirectUri}` +
+        `&response_type=code` +
+        `&scope=${scope}`;
+
+      window.location.href = googleAuthUrl;
     } catch (err) {
       console.error("Google login error:", err);
       setError("Failed to initiate Google login. Please try again.");
