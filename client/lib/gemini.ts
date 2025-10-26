@@ -1,6 +1,6 @@
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
+  "https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent";
 
 interface GeminiRequest {
   contents: Array<{
@@ -42,11 +42,17 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
       body: JSON.stringify(request),
     });
 
+    const data: GeminiResponse = await response.json();
+
     if (!response.ok) {
-      throw new Error(`API error: ${response.statusText}`);
+      console.error("Gemini API error response:", {
+        status: response.status,
+        statusText: response.statusText,
+        body: data,
+      });
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
     }
 
-    const data: GeminiResponse = await response.json();
     return (
       data.candidates[0]?.content.parts[0]?.text || "No response generated"
     );
