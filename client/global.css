@@ -149,13 +149,8 @@
 
   .stats-grid {
     @apply grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20;
-  }
-
-  @media (max-width: 991px) {
-    .stats-grid {
-      padding-top: 150px;
-      margin: 9px 0 -150px;
-    }
+    padding-top: 150px;
+    margin: 9px 0 -150px;
   }
 }
 
