@@ -42,16 +42,29 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
       body: JSON.stringify(request),
     });
 
+    const contentType = response.headers.get("content-type");
+    console.log("API Response:", {
+      status: response.status,
+      statusText: response.statusText,
+      contentType: contentType,
+    });
+
     let data;
     try {
-      data = await response.json();
+      if (contentType?.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error("Response is not JSON:", {
+          status: response.status,
+          contentType: contentType,
+          text: text,
+        });
+        throw new Error(`Non-JSON response: ${text}`);
+      }
     } catch (parseError) {
-      console.error("Failed to parse response as JSON", {
-        status: response.status,
-        statusText: response.statusText,
-        error: parseError,
-      });
-      throw new Error(`Failed to parse API response`);
+      console.error("Failed to parse response:", parseError);
+      throw parseError;
     }
 
     if (!response.ok) {
