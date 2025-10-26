@@ -47,8 +47,8 @@ export default function PrivacyPolicy() {
                 1. Introduction
               </h2>
               <p>
-                MorphSprint AI ("we," "us," "our," or "Company") is committed
-                to protecting your privacy. This Privacy Policy explains how we
+                MorphSprint AI ("we," "us," "our," or "Company") is committed to
+                protecting your privacy. This Privacy Policy explains how we
                 collect, use, disclose, and safeguard your information when you
                 visit our website and use our services.
               </p>
@@ -75,9 +75,7 @@ export default function PrivacyPolicy() {
               <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3 mt-6">
                 2.2 Automatically Collected Data
               </h3>
-              <p>
-                When you access our platform, we automatically collect:
-              </p>
+              <p>When you access our platform, we automatically collect:</p>
               <ul className="list-disc list-inside space-y-2 mt-2">
                 <li>IP addresses</li>
                 <li>Browser type and version</li>

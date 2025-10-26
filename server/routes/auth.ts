@@ -51,17 +51,22 @@ export const handleGoogleAuth: RequestHandler = async (req, res) => {
     if (!tokenResponse.ok) {
       const error = await tokenResponse.text();
       console.error("Token exchange failed:", error);
-      return res.status(400).json({ error: "Failed to exchange authorization code" });
+      return res
+        .status(400)
+        .json({ error: "Failed to exchange authorization code" });
     }
 
     const tokenData: GoogleTokenResponse = await tokenResponse.json();
 
     // Get user info using access token
-    const userInfoResponse = await fetch("https://www.googleapis.com/oauth2/v2/userinfo", {
-      headers: {
-        Authorization: `Bearer ${tokenData.access_token}`,
+    const userInfoResponse = await fetch(
+      "https://www.googleapis.com/oauth2/v2/userinfo",
+      {
+        headers: {
+          Authorization: `Bearer ${tokenData.access_token}`,
+        },
       },
-    });
+    );
 
     if (!userInfoResponse.ok) {
       return res.status(400).json({ error: "Failed to get user info" });

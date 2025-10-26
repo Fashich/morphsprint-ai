@@ -69,7 +69,9 @@ export default function Login() {
       const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
       if (!clientId) {
-        setError("Google OAuth is not configured. Please add VITE_GOOGLE_CLIENT_ID environment variable.");
+        setError(
+          "Google OAuth is not configured. Please add VITE_GOOGLE_CLIENT_ID environment variable.",
+        );
         setIsLoading(false);
         return;
       }

@@ -47,10 +47,10 @@ export default function TermsOfService() {
                 1. Agreement to Terms
               </h2>
               <p>
-                By accessing and using the MorphSprint AI platform
-                ("Service"), you accept and agree to be bound by the terms and
-                provision of this agreement. If you do not agree to abide by
-                the above, please do not use this service.
+                By accessing and using the MorphSprint AI platform ("Service"),
+                you accept and agree to be bound by the terms and provision of
+                this agreement. If you do not agree to abide by the above,
+                please do not use this service.
               </p>
             </section>
 
@@ -92,8 +92,8 @@ export default function TermsOfService() {
                 3. Disclaimer
               </h2>
               <p>
-                The materials on MorphSprint AI's website are provided on an
-                'as is' basis. MorphSprint AI makes no warranties, expressed or
+                The materials on MorphSprint AI's website are provided on an 'as
+                is' basis. MorphSprint AI makes no warranties, expressed or
                 implied, and hereby disclaims and negates all other warranties
                 including, without limitation, implied warranties or conditions
                 of merchantability, fitness for a particular purpose, or
@@ -124,10 +124,10 @@ export default function TermsOfService() {
               <p>
                 The materials appearing on MorphSprint AI's website could
                 include technical, typographical, or photographic errors.
-                MorphSprint AI does not warrant that any of the materials on
-                its website are accurate, complete, or current. MorphSprint AI
-                may make changes to the materials contained on its website at
-                any time without notice.
+                MorphSprint AI does not warrant that any of the materials on its
+                website are accurate, complete, or current. MorphSprint AI may
+                make changes to the materials contained on its website at any
+                time without notice.
               </p>
             </section>
 
@@ -149,10 +149,10 @@ export default function TermsOfService() {
                 7. Modifications
               </h2>
               <p>
-                MorphSprint AI may revise these terms of service for its
-                website at any time without notice. By using this website, you
-                are agreeing to be bound by the then current version of these
-                terms of service.
+                MorphSprint AI may revise these terms of service for its website
+                at any time without notice. By using this website, you are
+                agreeing to be bound by the then current version of these terms
+                of service.
               </p>
             </section>
 
@@ -198,8 +198,12 @@ export default function TermsOfService() {
                   Engage in commercial activities or sales without our express
                   written consent
                 </li>
-                <li>Attempt to interfere with the proper working of the Service</li>
-                <li>Attempt to gain unauthorized access to any portion or area</li>
+                <li>
+                  Attempt to interfere with the proper working of the Service
+                </li>
+                <li>
+                  Attempt to gain unauthorized access to any portion or area
+                </li>
               </ul>
             </section>
 
