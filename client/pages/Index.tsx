@@ -121,7 +121,7 @@ export default function Index() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20 max-[991px]:pt-[150px] max-[991px]:my-[-150px_0_auto] max-[991px]:my-[9px_0_-150px]">
+          <div className="stats-grid">
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 font-display">
                 98%
