@@ -42,18 +42,16 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
       body: JSON.stringify(request),
     });
 
-    const responseText = await response.text();
     let data;
-
     try {
-      data = JSON.parse(responseText);
+      data = await response.json();
     } catch (parseError) {
-      console.error("Failed to parse response as JSON:", {
+      console.error("Failed to parse response as JSON", {
         status: response.status,
         statusText: response.statusText,
-        text: responseText,
+        error: parseError,
       });
-      throw new Error(`Failed to parse API response: ${responseText}`);
+      throw new Error(`Failed to parse API response`);
     }
 
     if (!response.ok) {
@@ -62,7 +60,7 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
         statusText: response.statusText,
         body: data,
       });
-      throw new Error(`API error: ${response.status} ${response.statusText} - ${JSON.stringify(data)}`);
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
     }
 
     return (
