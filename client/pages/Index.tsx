@@ -385,15 +385,15 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-slate-200/50 dark:border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600 dark:text-slate-400">
-            <p>&copy; 2024 MorphSprint AI. All rights reserved.</p>
+            <p>&copy; 2025 MorphSprint AI. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
-                Twitter
+              <a href="https://www.instagram.com/thalassaaddict._" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                Instagram
               </a>
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
-                Discord
+              <a href="https://www.linkedin.com/in/ahmadfashich/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                LinkedIn
               </a>
-              <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+              <a href="https://github.com/Fashich" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
                 GitHub
               </a>
             </div>
