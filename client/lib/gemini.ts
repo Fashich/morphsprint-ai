@@ -43,7 +43,13 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
     });
 
     if (!response.ok) {
-      throw new Error(`API error: ${response.statusText}`);
+      const errorText = await response.text();
+      console.error("Gemini API error response:", {
+        status: response.status,
+        statusText: response.statusText,
+        body: errorText,
+      });
+      throw new Error(`API error: ${response.status} ${response.statusText} - ${errorText}`);
     }
 
     const data: GeminiResponse = await response.json();
