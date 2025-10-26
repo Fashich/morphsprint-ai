@@ -109,7 +109,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950 relative overflow-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl top-20 left-10" />
@@ -130,17 +130,17 @@ export default function Login() {
               alt="MorphSprint AI"
               className="h-12 w-12 rounded-lg"
             />
-            <span className="text-2xl font-bold text-white font-display">
+            <span className="text-2xl font-bold text-slate-900 dark:text-white font-display">
               MorphSprint AI
             </span>
           </div>
 
           {/* Title */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-bold text-white mb-3 font-display">
+            <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3 font-display">
               Welcome Back
             </h1>
-            <p className="text-slate-300">
+            <p className="text-slate-600 dark:text-slate-300">
               Connect your wallet or try the demo to explore sprint planning
               powered by AI and blockchain.
             </p>
@@ -176,7 +176,7 @@ export default function Login() {
             <button
               onClick={handleGoogleLogin}
               disabled={isLoading}
-              className="w-full group relative px-6 py-4 rounded-lg font-semibold text-slate-900 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full group relative px-6 py-4 rounded-lg font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center justify-center gap-3">
                 <Chrome className="w-5 h-5 text-red-500" />
@@ -191,15 +191,15 @@ export default function Login() {
 
             {/* Divider */}
             <div className="flex items-center gap-3 my-6">
-              <div className="flex-1 h-px bg-slate-700" />
-              <span className="text-slate-400 text-sm">or</span>
-              <div className="flex-1 h-px bg-slate-700" />
+              <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
+              <span className="text-slate-600 dark:text-slate-400 text-sm">or</span>
+              <div className="flex-1 h-px bg-slate-300 dark:bg-slate-700" />
             </div>
 
             {/* Guest Mode */}
             <button
               onClick={handleGuestMode}
-              className="w-full group relative px-6 py-4 rounded-lg font-semibold text-white border border-slate-600 hover:border-purple-500 bg-slate-800/50 hover:bg-slate-800 transition-all duration-300"
+              className="w-full group relative px-6 py-4 rounded-lg font-semibold text-slate-900 dark:text-white border border-slate-400 dark:border-slate-600 hover:border-purple-500 dark:hover:border-purple-500 bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-300"
             >
               <span className="flex items-center justify-center gap-2">
                 Try Demo
@@ -209,9 +209,9 @@ export default function Login() {
           </div>
 
           {/* Info Box */}
-          <div className="mt-12 p-4 rounded-lg border border-slate-700 bg-slate-800/50 backdrop-blur">
-            <p className="text-sm text-slate-300">
-              <span className="font-semibold text-slate-200">Demo Mode:</span>{" "}
+          <div className="mt-12 p-4 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/50 backdrop-blur">
+            <p className="text-sm text-slate-700 dark:text-slate-300">
+              <span className="font-semibold text-slate-800 dark:text-slate-200">Demo Mode:</span>{" "}
               Experience all features without connecting a wallet. Demo data is
               pre-loaded for easy exploration.
             </p>
@@ -221,13 +221,13 @@ export default function Login() {
           <div className="mt-8 flex justify-center gap-6 text-sm">
             <a
               href="/privacy-policy"
-              className="text-slate-400 hover:text-slate-200 transition-colors"
+              className="text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
             >
               Privacy Policy
             </a>
             <a
               href="/terms-of-service"
-              className="text-slate-400 hover:text-slate-200 transition-colors"
+              className="text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
             >
               Terms of Service
             </a>
