@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Zap, Shield, Brain } from "lucide-react";
 
-const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
 
 export default function Index() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -47,7 +48,11 @@ export default function Index() {
       <nav className="sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
+            <img
+              src={LOGO_URL}
+              alt="MorphSprint AI"
+              className="h-10 w-10 rounded-lg"
+            />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
               MorphSprint AI
             </span>
@@ -87,20 +92,27 @@ export default function Index() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed">
-            MorphSprint AI combines intelligent capacity prediction with blockchain
-            transparency, transforming how Agile teams plan sprints and document
-            their achievements. Experience the future of sprint planning powered by
-            artificial intelligence and decentralized verification.
+            MorphSprint AI combines intelligent capacity prediction with
+            blockchain transparency, transforming how Agile teams plan sprints
+            and document their achievements. Experience the future of sprint
+            planning powered by artificial intelligence and decentralized
+            verification.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button onClick={() => window.location.href = '/login'} className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer">
+            <button
+              onClick={() => (window.location.href = "/login")}
+              className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+            >
               <span className="flex items-center gap-2 justify-center">
                 Connect MetaMask
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
-            <button onClick={() => window.location.href = '/login?mode=demo'} className="group relative px-8 py-4 rounded-lg font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
+            <button
+              onClick={() => (window.location.href = "/login?mode=demo")}
+              className="group relative px-8 py-4 rounded-lg font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
+            >
               <span className="flex items-center gap-2 justify-center">
                 Try Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -204,8 +216,8 @@ export default function Index() {
                   Connect Your Wallet
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Securely link your Web3 wallet to access the platform and enable
-                  automatic NFT minting for completed sprints.
+                  Securely link your Web3 wallet to access the platform and
+                  enable automatic NFT minting for completed sprints.
                 </p>
               </div>
             </div>
@@ -238,8 +250,8 @@ export default function Index() {
                   Get Predictions & Recommendations
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Receive AI-generated capacity forecasts with detailed explanations
-                  of the factors influencing the prediction.
+                  Receive AI-generated capacity forecasts with detailed
+                  explanations of the factors influencing the prediction.
                 </p>
               </div>
             </div>
@@ -255,8 +267,8 @@ export default function Index() {
                   Execute & Mint NFTs
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Complete your sprint and automatically mint achievement NFTs to
-                  the blockchain for permanent verification.
+                  Complete your sprint and automatically mint achievement NFTs
+                  to the blockchain for permanent verification.
                 </p>
               </div>
             </div>
@@ -295,10 +307,13 @@ export default function Index() {
             Ready to Transform Your Sprint Planning?
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of teams already using MorphSprint AI to predict capacity
-            and document achievements on the blockchain.
+            Join thousands of teams already using MorphSprint AI to predict
+            capacity and document achievements on the blockchain.
           </p>
-          <button onClick={() => window.location.href = '/login'} className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer">
+          <button
+            onClick={() => (window.location.href = "/login")}
+            className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer"
+          >
             <span className="flex items-center gap-2 justify-center">
               Get Started Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -313,7 +328,11 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <img src={LOGO_URL} alt="MorphSprint AI" className="h-8 w-8 rounded-lg" />
+                <img
+                  src={LOGO_URL}
+                  alt="MorphSprint AI"
+                  className="h-8 w-8 rounded-lg"
+                />
                 <span className="font-bold text-slate-900 dark:text-white font-display">
                   MorphSprint AI
                 </span>
@@ -328,17 +347,26 @@ export default function Index() {
               </h4>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Security
                   </a>
                 </li>
@@ -350,17 +378,26 @@ export default function Index() {
               </h4>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Contact
                   </a>
                 </li>
@@ -372,12 +409,18 @@ export default function Index() {
               </h4>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Privacy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+                  <a
+                    href="#"
+                    className="hover:text-slate-900 dark:hover:text-white transition-colors"
+                  >
                     Terms
                   </a>
                 </li>
@@ -387,13 +430,28 @@ export default function Index() {
           <div className="border-t border-slate-200/50 dark:border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600 dark:text-slate-400">
             <p>&copy; 2025 MorphSprint AI. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="https://www.instagram.com/thalassaaddict._" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/thalassaaddict._"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-slate-900 dark:hover:text-white transition-colors"
+              >
                 Instagram
               </a>
-              <a href="https://www.linkedin.com/in/ahmadfashich/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+              <a
+                href="https://www.linkedin.com/in/ahmadfashich/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-slate-900 dark:hover:text-white transition-colors"
+              >
                 LinkedIn
               </a>
-              <a href="https://github.com/Fashich" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors">
+              <a
+                href="https://github.com/Fashich"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-slate-900 dark:hover:text-white transition-colors"
+              >
                 GitHub
               </a>
             </div>

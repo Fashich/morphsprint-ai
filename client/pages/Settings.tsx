@@ -1,7 +1,15 @@
 import { useState } from "react";
-import { Settings as SettingsIcon, Moon, Globe, Bell, Save, RotateCcw } from "lucide-react";
+import {
+  Settings as SettingsIcon,
+  Moon,
+  Globe,
+  Bell,
+  Save,
+  RotateCcw,
+} from "lucide-react";
 
-const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
 
 export default function Settings() {
   const [settings, setSettings] = useState({
@@ -43,7 +51,9 @@ export default function Settings() {
     setSaved(false);
   };
 
-  const handleNotificationToggle = (key: keyof typeof settings.notifications) => {
+  const handleNotificationToggle = (
+    key: keyof typeof settings.notifications,
+  ) => {
     setSettings({
       ...settings,
       notifications: {
@@ -122,7 +132,11 @@ export default function Settings() {
       <nav className="border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
+            <img
+              src={LOGO_URL}
+              alt="MorphSprint AI"
+              className="h-10 w-10 rounded-lg"
+            />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
               MorphSprint AI
             </span>
@@ -181,14 +195,15 @@ export default function Settings() {
             </div>
             <div className="flex items-center justify-between">
               <span className="text-slate-600 dark:text-slate-300">
-                Theme: <span className="font-semibold capitalize">{settings.theme}</span>
+                Theme:{" "}
+                <span className="font-semibold capitalize">
+                  {settings.theme}
+                </span>
               </span>
               <button
                 onClick={handleThemeToggle}
                 className={`relative w-14 h-8 rounded-full transition-all duration-300 ${
-                  settings.theme === "dark"
-                    ? "bg-purple-600"
-                    : "bg-slate-300"
+                  settings.theme === "dark" ? "bg-purple-600" : "bg-slate-300"
                 }`}
               >
                 <div
@@ -240,20 +255,26 @@ export default function Settings() {
                 {
                   key: "nftMinting" as const,
                   label: "NFT Minting Notifications",
-                  description: "Receive alerts when NFTs are minted for achievements",
+                  description:
+                    "Receive alerts when NFTs are minted for achievements",
                 },
                 {
                   key: "teamActivity" as const,
                   label: "Team Activity Updates",
-                  description: "Stay updated on team member activities and progress",
+                  description:
+                    "Stay updated on team member activities and progress",
                 },
                 {
                   key: "aiSuggestions" as const,
                   label: "AI Suggestions",
-                  description: "Get AI-powered recommendations for sprint planning",
+                  description:
+                    "Get AI-powered recommendations for sprint planning",
                 },
               ].map((item) => (
-                <div key={item.key} className="flex items-start justify-between py-3 border-b border-slate-200 dark:border-slate-700 last:border-0">
+                <div
+                  key={item.key}
+                  className="flex items-start justify-between py-3 border-b border-slate-200 dark:border-slate-700 last:border-0"
+                >
                   <div className="flex-1">
                     <p className="font-semibold text-slate-900 dark:text-white">
                       {item.label}
@@ -299,7 +320,8 @@ export default function Settings() {
                     {settings.wallet.address}
                   </code>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-                    <span className="font-semibold">Network:</span> {settings.wallet.network}
+                    <span className="font-semibold">Network:</span>{" "}
+                    {settings.wallet.network}
                   </p>
                 </div>
                 <button
@@ -312,7 +334,8 @@ export default function Settings() {
             ) : (
               <>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  No wallet connected. Connect your Web3 wallet to access all features.
+                  No wallet connected. Connect your Web3 wallet to access all
+                  features.
                 </p>
                 <button
                   onClick={handleConnectWallet}
@@ -337,12 +360,14 @@ export default function Settings() {
                 {
                   key: "profilePublic" as const,
                   label: "Public Profile",
-                  description: "Allow others to view your profile and achievements",
+                  description:
+                    "Allow others to view your profile and achievements",
                 },
                 {
                   key: "showContributions" as const,
                   label: "Show Contributions",
-                  description: "Display your contributions and sprint history publicly",
+                  description:
+                    "Display your contributions and sprint history publicly",
                 },
                 {
                   key: "allowDataCollection" as const,
@@ -350,7 +375,10 @@ export default function Settings() {
                   description: "Help us improve by sharing usage analytics",
                 },
               ].map((item) => (
-                <div key={item.key} className="flex items-start justify-between py-3 border-b border-slate-200 dark:border-slate-700 last:border-0">
+                <div
+                  key={item.key}
+                  className="flex items-start justify-between py-3 border-b border-slate-200 dark:border-slate-700 last:border-0"
+                >
                   <div className="flex-1">
                     <p className="font-semibold text-slate-900 dark:text-white">
                       {item.label}

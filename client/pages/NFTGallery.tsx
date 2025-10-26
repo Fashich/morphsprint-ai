@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Zap, Share2, Download, Eye, ExternalLink } from "lucide-react";
 
-const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
 
 interface NFT {
   id: number;
@@ -59,15 +60,12 @@ export default function NFTGallery() {
 
     window.open(
       `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
-      "_blank"
+      "_blank",
     );
   };
 
   const handleViewOnchain = (contractAddress: string) => {
-    window.open(
-      `https://etherscan.io/address/${contractAddress}`,
-      "_blank"
-    );
+    window.open(`https://etherscan.io/address/${contractAddress}`, "_blank");
   };
 
   return (
@@ -76,7 +74,11 @@ export default function NFTGallery() {
       <nav className="border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
+            <img
+              src={LOGO_URL}
+              alt="MorphSprint AI"
+              className="h-10 w-10 rounded-lg"
+            />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
               MorphSprint AI
             </span>
@@ -112,7 +114,8 @@ export default function NFTGallery() {
             NFT Gallery
           </h1>
           <p className="text-slate-600 dark:text-slate-300">
-            View and manage your achievement NFTs minted from completed sprints. Each NFT represents a milestone on the blockchain.
+            View and manage your achievement NFTs minted from completed sprints.
+            Each NFT represents a milestone on the blockchain.
           </p>
         </div>
 
@@ -132,7 +135,9 @@ export default function NFTGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
                   <div className="text-white">
                     <p className="text-sm font-semibold">Contract:</p>
-                    <p className="text-xs text-slate-300">{nft.contractAddress}</p>
+                    <p className="text-xs text-slate-300">
+                      {nft.contractAddress}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -254,7 +259,9 @@ export default function NFTGallery() {
                     </code>
                     <button
                       onClick={() => {
-                        navigator.clipboard.writeText(selectedNFT.contractAddress);
+                        navigator.clipboard.writeText(
+                          selectedNFT.contractAddress,
+                        );
                       }}
                       className="px-3 py-1 text-sm rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
                     >
@@ -318,7 +325,9 @@ export default function NFTGallery() {
             <p className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2 font-display">
               {nfts.reduce((sum, nft) => sum + nft.points, 0)}
             </p>
-            <p className="text-slate-600 dark:text-slate-300">Total Points Verified</p>
+            <p className="text-slate-600 dark:text-slate-300">
+              Total Points Verified
+            </p>
           </div>
           <div className="p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 bg-white/50 dark:bg-slate-900/50 backdrop-blur text-center">
             <p className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 font-display">

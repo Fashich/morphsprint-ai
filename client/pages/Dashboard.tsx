@@ -1,8 +1,21 @@
 import { useState, useEffect } from "react";
-import { BarChart3, TrendingUp, Users, Trophy, Plus, Sparkles, Loader } from "lucide-react";
-import { predictSprintCapacity, generateTaskSuggestions, getTeamInsights } from "@/lib/gemini";
+import {
+  BarChart3,
+  TrendingUp,
+  Users,
+  Trophy,
+  Plus,
+  Sparkles,
+  Loader,
+} from "lucide-react";
+import {
+  predictSprintCapacity,
+  generateTaskSuggestions,
+  getTeamInsights,
+} from "@/lib/gemini";
 
-const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
 
 interface Sprint {
   id: number;
@@ -93,8 +106,11 @@ export default function Dashboard() {
   const [newStoryPoints, setNewStoryPoints] = useState("");
 
   const historicalVelocity = sprints.map((s) => s.completed);
-  const avgVelocity = (historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length).toFixed(1);
-  const completedPoints = userStories.filter((s) => s.status === "completed").length * 5;
+  const avgVelocity = (
+    historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length
+  ).toFixed(1);
+  const completedPoints =
+    userStories.filter((s) => s.status === "completed").length * 5;
 
   const handlePredictCapacity = async () => {
     setIsLoading(true);
@@ -102,7 +118,7 @@ export default function Dashboard() {
       const prediction = await predictSprintCapacity(
         historicalVelocity,
         6,
-        "Medium - Web3 Integration"
+        "Medium - Web3 Integration",
       );
       setCapacityPrediction(prediction);
     } catch (error) {
@@ -117,7 +133,7 @@ export default function Dashboard() {
     try {
       const suggestions = await generateTaskSuggestions(
         "Complete MorphSprint AI MVP",
-        "Full-stack development, blockchain, AI/ML"
+        "Full-stack development, blockchain, AI/ML",
       );
       setTaskSuggestions(suggestions);
     } catch (error) {
@@ -164,7 +180,11 @@ export default function Dashboard() {
       <nav className="border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
+            <img
+              src={LOGO_URL}
+              alt="MorphSprint AI"
+              className="h-10 w-10 rounded-lg"
+            />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
               MorphSprint AI
             </span>
@@ -200,7 +220,8 @@ export default function Dashboard() {
             Sprint Dashboard
           </h1>
           <p className="text-slate-600 dark:text-slate-300">
-            Manage your sprints with AI-powered insights and blockchain verification
+            Manage your sprints with AI-powered insights and blockchain
+            verification
           </p>
         </div>
 
@@ -277,7 +298,8 @@ export default function Dashboard() {
               </h2>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-              Get AI-powered predictions for your next sprint capacity based on historical data.
+              Get AI-powered predictions for your next sprint capacity based on
+              historical data.
             </p>
             <button
               onClick={handlePredictCapacity}
@@ -313,7 +335,8 @@ export default function Dashboard() {
               </h2>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-              Receive AI-generated insights on team performance and productivity improvements.
+              Receive AI-generated insights on team performance and productivity
+              improvements.
             </p>
             <button
               onClick={handleGetInsights}
@@ -418,7 +441,10 @@ export default function Dashboard() {
                           : "bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-300"
                     }`}
                   >
-                    {story.status === "in-progress" ? "In Progress" : story.status.charAt(0).toUpperCase() + story.status.slice(1)}
+                    {story.status === "in-progress"
+                      ? "In Progress"
+                      : story.status.charAt(0).toUpperCase() +
+                        story.status.slice(1)}
                   </span>
                 </div>
               </div>
@@ -465,7 +491,9 @@ export default function Dashboard() {
                 <div className="mt-2 w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
                   <div
                     className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
-                    style={{ width: `${(sprint.completed / sprint.points) * 100}%` }}
+                    style={{
+                      width: `${(sprint.completed / sprint.points) * 100}%`,
+                    }}
                   />
                 </div>
               </div>

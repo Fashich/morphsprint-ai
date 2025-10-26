@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { ArrowRight, Wallet } from "lucide-react";
 
-const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+const LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
@@ -32,7 +33,11 @@ export default function Login() {
         <div className="max-w-md w-full">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-12 justify-center">
-            <img src={LOGO_URL} alt="MorphSprint AI" className="h-12 w-12 rounded-lg" />
+            <img
+              src={LOGO_URL}
+              alt="MorphSprint AI"
+              className="h-12 w-12 rounded-lg"
+            />
             <span className="text-2xl font-bold text-white font-display">
               MorphSprint AI
             </span>
@@ -90,9 +95,9 @@ export default function Login() {
           {/* Info Box */}
           <div className="mt-12 p-4 rounded-lg border border-slate-700 bg-slate-800/50 backdrop-blur">
             <p className="text-sm text-slate-300">
-              <span className="font-semibold text-slate-200">Demo Mode:</span> Experience
-              all features without connecting a wallet. Demo data is pre-loaded for
-              easy exploration.
+              <span className="font-semibold text-slate-200">Demo Mode:</span>{" "}
+              Experience all features without connecting a wallet. Demo data is
+              pre-loaded for easy exploration.
             </p>
           </div>
 

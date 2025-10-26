@@ -1,5 +1,6 @@
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
+const API_URL =
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
 
 interface GeminiRequest {
   contents: Array<{
@@ -46,7 +47,9 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
     }
 
     const data: GeminiResponse = await response.json();
-    return data.candidates[0]?.content.parts[0]?.text || "No response generated";
+    return (
+      data.candidates[0]?.content.parts[0]?.text || "No response generated"
+    );
   } catch (error) {
     console.error("Gemini API error:", error);
     throw error;
@@ -56,9 +59,10 @@ export async function callGeminiAPI(prompt: string): Promise<string> {
 export async function predictSprintCapacity(
   historicalVelocity: number[],
   teamSize: number,
-  complexity: string
+  complexity: string,
 ): Promise<string> {
-  const avgVelocity = historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length;
+  const avgVelocity =
+    historicalVelocity.reduce((a, b) => a + b, 0) / historicalVelocity.length;
   const prompt = `As an Agile sprint planning expert, analyze the following team metrics and provide a sprint capacity prediction:
 
 Historical Velocity (last 5 sprints): ${historicalVelocity.join(", ")} story points
@@ -79,7 +83,7 @@ Format your response in a structured, professional way.`;
 
 export async function generateTaskSuggestions(
   sprintGoal: string,
-  teamExpertise: string
+  teamExpertise: string,
 ): Promise<string> {
   const prompt = `As an Agile project manager, suggest 5 user stories for a sprint with the following context:
 
@@ -98,13 +102,11 @@ Format as a clear, organized list.`;
   return callGeminiAPI(prompt);
 }
 
-export async function getTeamInsights(
-  teamData: {
-    velocity: number[];
-    completionRate: number;
-    avgCycleTime: number;
-  }
-): Promise<string> {
+export async function getTeamInsights(teamData: {
+  velocity: number[];
+  completionRate: number;
+  avgCycleTime: number;
+}): Promise<string> {
   const prompt = `Analyze the following team performance metrics and provide actionable insights:
 
 Recent Sprint Velocities: ${teamData.velocity.join(", ")} points
