@@ -58,7 +58,7 @@ export default function Index() {
               MorphSprint AI
             </span>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <a
               href="#features"
               className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
@@ -71,6 +71,7 @@ export default function Index() {
             >
               How It Works
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </nav>
