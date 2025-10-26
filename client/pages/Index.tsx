@@ -313,11 +313,9 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">◆</span>
-                </div>
+                <img src={LOGO_URL} alt="MorphSprint AI" className="h-8 w-8 rounded-lg" />
                 <span className="font-bold text-slate-900 dark:text-white font-display">
-                  SprintWise AI
+                  MorphSprint AI
                 </span>
               </div>
               <p className="text-sm text-slate-600 dark:text-slate-400">
