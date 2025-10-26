@@ -121,94 +121,30 @@ export default function Index() {
           </div>
 
           {/* Stats */}
-          <div
-            style={{
-              display: "grid",
-              fontWeight: "400",
-              gap: "32px",
-              gridTemplateColumns: "repeat(3, minmax(0px, 1fr))",
-              maxWidth: "672px",
-              "@media (max-width: 991px)": {
-                paddingTop: "150px",
-                margin: "9px 0 -150px",
-              },
-              margin: "0 auto 80px",
-            }}
-          >
-            <div
-              style={{
-                fontWeight: "400",
-              }}
-            >
-              <div
-                style={{
-                  color: "rgb(96, 165, 250)",
-                  font: "700 36px/40px Montserrat, sans-serif",
-                }}
-              >
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-20 max-[991px]:pt-[150px] max-[991px]:my-[-150px_0_auto] max-[991px]:my-[9px_0_-150px]">
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 font-display">
                 98%
-              </div>
-              <div
-                style={{
-                  color: "rgb(148, 163, 184)",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                  lineHeight: "20px",
-                  marginTop: "8px",
-                }}
-              >
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
                 Prediction Accuracy
-              </div>
+              </p>
             </div>
-            <div
-              style={{
-                fontWeight: "400",
-              }}
-            >
-              <div
-                style={{
-                  color: "rgb(147, 51, 234)",
-                  font: "700 36px/40px Montserrat, sans-serif",
-                }}
-              >
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 font-display">
                 10K+
-              </div>
-              <div
-                style={{
-                  color: "rgb(148, 163, 184)",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                  lineHeight: "20px",
-                  marginTop: "8px",
-                }}
-              >
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
                 Teams Powered
-              </div>
+              </p>
             </div>
-            <div
-              style={{
-                fontWeight: "400",
-              }}
-            >
-              <div
-                style={{
-                  color: "rgb(96, 165, 250)",
-                  font: "700 36px/40px Montserrat, sans-serif",
-                }}
-              >
+            <div className="text-center">
+              <p className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 font-display">
                 100%
-              </div>
-              <div
-                style={{
-                  color: "rgb(148, 163, 184)",
-                  fontSize: "14px",
-                  fontWeight: "400",
-                  lineHeight: "20px",
-                  marginTop: "8px",
-                }}
-              >
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
                 On-Chain Verified
-              </div>
+              </p>
             </div>
           </div>
         </div>
