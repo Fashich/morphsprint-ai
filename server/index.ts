@@ -2,6 +2,8 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
+import { handleRealtimeData } from "./routes/data";
+import { handleGoogleAuth } from "./routes/auth";
 
 export function createServer() {
   const app = express();
@@ -18,6 +20,8 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
+  app.get("/api/data", handleRealtimeData);
+  app.post("/api/auth/google", handleGoogleAuth);
 
   return app;
 }
