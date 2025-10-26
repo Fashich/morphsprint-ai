@@ -186,8 +186,18 @@ export default function PrivacyPolicy() {
                 us at:
               </p>
               <ul className="list-disc list-inside space-y-2 mt-2">
-                <li>Email: privacy@morphsprint.ai</li>
-                <li>Address: MorphSprint AI, Tech Hub, San Francisco, CA</li>
+                <li>Email: thalassaaddict@gmail.com</li>
+                <li>
+                  LinkedIn:{" "}
+                  <a
+                    href="https://www.linkedin.com/in/ahmadfashich/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    https://www.linkedin.com/in/ahmadfashich/
+                  </a>
+                </li>
               </ul>
             </section>
 
