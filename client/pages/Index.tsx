@@ -83,10 +83,7 @@ export default function Index() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 font-display leading-tight">
-            Sprint Planning{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Reimagined
-            </span>
+            MorphSprint AI
           </h1>
 
           <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed">
