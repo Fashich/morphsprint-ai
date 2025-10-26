@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ArrowRight, Wallet } from "lucide-react";
 
+const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
 
