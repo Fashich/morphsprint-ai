@@ -1,17 +1,17 @@
 import { BarChart3, TrendingUp, Users, Trophy } from "lucide-react";
 
+const LOGO_URL = "https://cdn.builder.io/api/v1/image/assets%2F5b28f6891f9443469e73e62e1d9f2778%2F1437029880df4d3ca60e17eeef837ab6?format=webp&width=800";
+
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-950 dark:via-blue-950 dark:to-purple-950">
       {/* Navigation */}
-      <nav className="border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30 sticky top-0 z-40">
+      <nav className="border-b border-slate-200/50 dark:border-slate-800/50 backdrop-blur-md bg-white/30 dark:bg-slate-950/30 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">◆</span>
-            </div>
+            <img src={LOGO_URL} alt="MorphSprint AI" className="h-10 w-10 rounded-lg" />
             <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
-              SprintWise AI
+              MorphSprint AI
             </span>
           </div>
           <div className="flex items-center gap-4">
