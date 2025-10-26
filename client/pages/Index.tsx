@@ -298,7 +298,7 @@ export default function Index() {
             Join thousands of teams already using MorphSprint AI to predict capacity
             and document achievements on the blockchain.
           </p>
-          <button className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button onClick={() => window.location.href = '/login'} className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer">
             <span className="flex items-center gap-2 justify-center">
               Get Started Now
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
