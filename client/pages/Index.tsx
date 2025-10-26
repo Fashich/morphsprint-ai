@@ -94,13 +94,13 @@ export default function Index() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button onClick={() => window.location.href = '/login'} className="group relative px-8 py-4 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer">
               <span className="flex items-center gap-2 justify-center">
                 Connect MetaMask
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
-            <button className="group relative px-8 py-4 rounded-lg font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 shadow-md hover:shadow-lg">
+            <button onClick={() => window.location.href = '/login?mode=demo'} className="group relative px-8 py-4 rounded-lg font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer">
               <span className="flex items-center gap-2 justify-center">
                 Try Demo
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
